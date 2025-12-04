@@ -1,0 +1,53 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+BEGIN:STANDARD
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+TZNAME:GMT+5:30
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Kolkata:20251130T100000
+DTEND;TZID=Asia/Kolkata:20251130T110000
+DTSTAMP:20251126T040400Z
+ORGANIZER;CN=HR Team Calanjiyam:mailto:hr@calanjiyam.com
+UID:5inclpk7m8qvoat16a2fkoma0d@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=lakshyaparmar1282@gmail.com;X-NUM-GUESTS=0:mailto:lakshyaparmar1282
+ @gmail.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/ieb-cnni-esc
+X-MICROSOFT-CDO-OWNERAPPTID:-602322376
+CREATED:20251125T105032Z
+DESCRIPTION:<p>Greetings for the day.</p><p>We are pleased to welcome you t
+ o the Calanjiyam Student Operations Program Department.</p><p>This mandator
+ y meeting is crucial for providing a <b>comprehensive overview</b> of your 
+ upcoming internship\, including a detailed walkthrough of the entire <b>tra
+ ining period</b> and the <b>internship agenda</b>. We will cover all necess
+ ary information to ensure a successful start to your journey with us.</p><u
+ l><li><p><b>Date:</b> NOV 30 2025 - Sunday</p></li><li><p><b>Time:</b> <b>1
+ 0:00 AM (Sharp)</b></p></li><li><p><b>Location/Platform:</b> <i>Google Meet
+  </i></p></li></ul><p><b>Please ensure your punctual attendance</b> as we w
+ ill be starting precisely at 10:00 AM. Your commitment to timeliness is hig
+ hly appreciated.</p><p>We look forward to seeing you there.</p>\n\n-::~:~::
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:
+ ~::-\nJoin with Google Meet: https://meet.google.com/ieb-cnni-esc\nOr dial:
+  (US) +1 845-293-2069 PIN: 378852304#\nMore phone numbers: https://tel.meet
+ /ieb-cnni-esc?pin=9784619826780&hs=7\n\nLearn more about Meet at: https://s
+ upport.google.com/a/users/answer/9282720\n\nPlease do not edit this section
+ .\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~::~:~::-
+LAST-MODIFIED:20251126T040357Z
+LOCATION:https://meet.google.com/ieb-cnni-esc
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:WDI DEC 25 - Briefing Session
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
