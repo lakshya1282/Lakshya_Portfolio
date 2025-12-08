@@ -20,6 +20,31 @@ document.addEventListener('DOMContentLoaded', () => {
     window.setTimeout(() => html.classList.remove('theme-transition'), 360);
   });
 
+  // --- AOS (Animate On Scroll) init with mobile-safe options ---
+  (function initAOS(){
+    if (!window.AOS) return;
+    try {
+      AOS.init({
+        // Respect user motion preferences on any device
+        disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+        startEvent: 'DOMContentLoaded',
+        once: true,
+        duration: 700,
+        easing: 'ease-out',
+        offset: 0, // trigger earlier on small screens
+        anchorPlacement: 'top-bottom'
+      });
+      // Recalculate positions after assets load or orientation changes
+      window.addEventListener('load', () => AOS.refresh());
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => AOS.refresh());
+      }
+      window.addEventListener('orientationchange', () => setTimeout(() => AOS.refreshHard(), 250));
+    } catch (e) {
+      console.error('AOS init failed:', e);
+    }
+  })();
+
   // --- Render Skill Dots ---
   document.querySelectorAll('.dots').forEach(d => {
     const level = parseInt(d.dataset.level || 0);

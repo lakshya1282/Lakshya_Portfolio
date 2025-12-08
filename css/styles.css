@@ -397,6 +397,19 @@ html.light .contact-form textarea{
 .text-type__cursor{ margin-left:0.25rem; display:inline-block; animation: text-cursor-blink 1s steps(2, start) infinite; }
 @keyframes text-cursor-blink{ to{ visibility:hidden; } }
 
+/* AOS accessibility fallbacks: if animations are disabled, show content */
+@media (prefers-reduced-motion: reduce){
+  [data-aos]{
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+body.aos-disabled [data-aos]{
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 /* responsive adjustments */
 @media (max-width:1100px){
   .about-inner{gap:36px}
