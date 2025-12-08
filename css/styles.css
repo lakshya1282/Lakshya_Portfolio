@@ -432,3 +432,102 @@ html.light .contact-form textarea{
   width:100%;
 
 }
+
+/* === Responsive enhancements (added) === */
+/* Fluid, scalable typography overrides */
+.big-name{ font-size: clamp(48px, 12vw, 180px); }
+.section-title{ font-size: clamp(32px, 9vw, 140px); }
+.tagline{ font-size: clamp(16px, 2.2vw, 20px); }
+
+/* Make media scale by default */
+img, video, canvas{ max-width:100%; height:auto; }
+
+/* Very large screens */
+@media (min-width:1600px){
+  .hero-right{ height:640px; }
+  .glow-blob.large{ width:820px; height:820px; right:-200px; bottom:-80px; }
+}
+
+/* Desktops / laptops */
+@media (max-width:1200px){
+  .hero-right{ height:520px; }
+  .skills-grid{ gap:40px; }
+}
+
+@media (max-width:1024px){
+  .nav{ gap:16px; margin-left:24px; }
+  .project-media{ width:280px; height:180px; }
+}
+
+/* Tablets */
+@media (max-width:768px){
+  .topbar{ top:12px; }
+  .topbar .container{ flex-wrap:wrap; row-gap:10px; }
+  .brand{ font-size:24px; }
+  .nav{ order:3; width:100%; justify-content:center; flex-wrap:wrap; gap:12px; }
+  .controls{ margin-left:0; }
+  #toggle{ width:32px; height:16px; }
+  #toggle::after{ width:10px; height:10px; }
+  .light #toggle::after{ left:18px; }
+
+  .hero{ padding:44px 0; }
+  .hero-inner{ gap:12px; }
+  .hero-right{ height:420px; }
+  .glow-blob.large{ right:-220px; width:520px; height:520px; }
+  .glow-blob.small{ right:40px; top:20px; width:140px; height:140px; }
+
+  .skills-grid{ flex-direction:column; gap:24px; }
+  .skill-name{ width:140px; font-size:16px; }
+  .dots{ grid-template-columns:repeat(8,18px); gap:10px; }
+  .dots span{ width:14px; height:14px; }
+
+  .project-row{ gap:12px; padding:12px 14px; }
+  .project-title{ font-size:20px; }
+
+  .contact-grid{ grid-template-columns:1fr; gap:36px; }
+  .contact-art .large-arc{ width:360px; height:360px; transform:none; margin:0 auto; }
+}
+
+/* Large phones / small tablets */
+@media (max-width:600px){
+  .container{ width:94%; }
+  .theme-toggle span{ display:none; }
+  .btn-cta, .cv-pill{ padding:10px 14px; font-size:14px; }
+  .cv-pill .icon{ padding:4px 6px; }
+  .tagline{ padding-left:12px; }
+
+  .hero-right{ height:360px; }
+  .glow-blob.large, .glow-blob.small{ display:none; }
+
+  .about-left{ height:320px; }
+  .about-circle-mask{ width:280px; height:280px; }
+  .about-title-overlay{ font-size:54px; margin-bottom:6px; }
+}
+
+/* Small phones */
+@media (max-width:480px){
+  .brand{ font-size:22px; }
+  .nav a{ font-size:12px; }
+  .topbar .container{ gap:12px; }
+
+  .hero{ padding:32px 0; }
+  .hero-right{ height:300px; }
+  .cv-pill{ gap:10px; }
+
+  .section-title{ letter-spacing:-0.5px; }
+  .skill-row{ gap:14px; }
+  .skill-name{ width:120px; font-size:15px; }
+  .dots{ grid-template-columns:repeat(8,16px); gap:8px; }
+  .dots span{ width:12px; height:12px; }
+
+  .project-link span{ display:none; }
+  .contact-form input, .contact-form textarea{ padding:16px; }
+}
+
+/* Very small devices (e.g., 360–375px) */
+@media (max-width:375px){
+  .big-name{ font-size: clamp(40px, 14vw, 64px); }
+  .section-title{ font-size: clamp(28px, 10vw, 56px); }
+  .brand{ font-size:20px; }
+  .btn-cta{ padding:8px 12px; font-size:13px; }
+}
