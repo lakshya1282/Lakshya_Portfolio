@@ -199,6 +199,65 @@ html.theme-transition, html.theme-transition * , html.theme-transition *::before
 .site-footer{padding:24px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
 .site-footer .small{display:flex;justify-content:center;color:var(--muted)}
 
+/* --- PORTFOLIO DESIGN --- */
+.portfolio-design{padding:60px 0;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.portfolio-design .section-title{ text-align:center; }
+.section-subtitle{margin:8px auto 10px; text-align:center; color: var(--muted); max-width:780px; font-size:20px}
+
+.pd-grid{
+  margin-top:28px;
+  background: var(--glass);
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:18px;
+  padding:22px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:22px;
+}
+
+.pd-card{
+  background: transparent;
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:16px;
+  padding:14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.pd-card.small .pd-thumb{ height:120px; }
+
+.pd-thumb{
+  height:160px;
+  border-radius:12px;
+  background: 
+              var(--panel);
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  /* hover motion base */
+  transform: translate3d(0,0,0);
+  transition: transform var(--theme-transition) var(--theme-ease),
+              box-shadow var(--theme-transition) var(--theme-ease);
+  will-change: transform, box-shadow;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.24);
+}
+
+/* Coming-out hover effect */
+.pd-card:hover .pd-thumb,
+.pd-thumb:hover{
+  transform: translate3d(8px,-8px,0);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.38);
+}
+@media (prefers-reduced-motion: reduce){
+  .pd-card:hover .pd-thumb, .pd-thumb:hover{ transform:none; }
+}
+
+.pd-thumb span{ color:#111; background:#e5e7eb; border-radius:10px; padding:6px 10px; font-weight:700; font-size:12px }
+.pd-thumb span{ color:#111; background:#e5e7eb; border-radius:10px; padding:6px 10px; font-weight:700; font-size:12px }
+
+.pd-meta{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:14px }
+.pd-tag{ color: var(--muted); font-size:13px; font-weight:700; letter-spacing:.4px }
+.pd-name{ display:inline-flex; align-items:center; gap:8px; color: var(--accent2); text-decoration:none; font-weight:800; padding:8px 10px; border-radius:10px }
+.pd-name:hover{ background: rgba(255,255,255,0.06) }
+.pd-name ion-icon{ font-size:18px }
+
 /* ===== About section styling (updated to match wireframe) ===== */
 .about{
   padding:80px 0;
