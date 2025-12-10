@@ -153,6 +153,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     els.forEach(init);
   })();
+  // --- Floating Lines effect (vanilla three.js port) ---
+  (async function initFloatingLines(){
+    const container = document.getElementById('global-lines') || document.getElementById('portfolio-lines');
+    if (!container) return;
+    try {
+      const mod = await import('./floating-lines.js');
+      const styles = getComputedStyle(document.documentElement);
+      const accent1 = (styles.getPropertyValue('--accent1') || '#ff2be2').trim();
+      const accent2 = (styles.getPropertyValue('--accent2') || '#63f0ff').trim();
+      mod.mountFloatingLines(container, {
+        enabledWaves: ['top','middle','bottom'],
+        lineCount: [10,15,20],
+        lineDistance: [8,6,4],
+        animationSpeed: 1,
+        interactive: true,
+        parallax: true,
+        linesGradient: ['#1a1a2e', '#16213e', '#0f3460']
+      });
+    } catch (e) { console.error('FloatingLines failed to init', e); }
+  })();
 });
 
 // --- Contact Form with EmailJS ---
